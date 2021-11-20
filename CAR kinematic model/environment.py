@@ -52,6 +52,8 @@ class Environment:
         R = np.array([[np.cos(angle), -np.sin(angle)],
                     [np.sin(angle),  np.cos(angle)]])
         return ((R @ pts.T).T).astype(int)
+        #return ((np.dot(R,pts.T)).T).astype(int)
+        
 
     def render(self, x, y, psi, delta):
         # x,y in 100 coordinates
